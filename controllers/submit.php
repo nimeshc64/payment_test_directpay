@@ -1,3 +1,8 @@
+<!--/**-->
+<!--* @author     Nimesh chathuranga-->
+<!--* @datetime   30/06/2020-->
+<!--*/-->
+
 <?php
 include 'config.php';
 
@@ -19,7 +24,7 @@ switch ($_POST['server']) {
 $devUrl = "";
 $prodUrl = "";
 
-$keyfile = "file://" . __DIR__ . "/keys/private_key.pem";
+$keyfile = "file://" . __DIR__ . "/../keys/private_key.pem";
 echo("<p style='color: white;'>keyPath: <br/>" . $keyfile . "</p>" . "\n");
 $pri_key = openssl_pkey_get_private($keyfile);
 

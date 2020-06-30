@@ -1,3 +1,8 @@
+<!--/**-->
+<!--* @author     Nimesh chathuranga-->
+<!--* @datetime   30/06/2020-->
+<!--*/-->
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,7 +41,7 @@
 
     <br/>
 
-    <a class="btn btn-success" href="index.html">New Transaction</a>
+    <a class="btn btn-success" href="../index.html">New Transaction</a>
 </div>
 
 
