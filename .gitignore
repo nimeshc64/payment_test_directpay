@@ -5,7 +5,6 @@ Homestead.yaml
 node_modules
 /package-lock.json
 report.*
-*.conf
 composer.lock
 .DS_Store
 
