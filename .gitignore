@@ -7,4 +7,5 @@ node_modules
 report.*
 *.conf
 composer.lock
+.DS_Store
 
