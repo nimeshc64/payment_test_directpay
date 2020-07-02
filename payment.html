@@ -1,0 +1,184 @@
+<!--/**-->
+<!--* @author     Nimesh chathuranga-->
+<!--* @datetime   30/06/2020-->
+<!--*/-->
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Directpay | Plugin Payment</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <form action="controllers/submit.php" method="POST">
+
+        <div class="row justify-content-end">
+            <div class="col-4 align-self-end">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Stage - (Testing purpose parameter)</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="server">
+                        <option value="local" selected>Local</option>
+                        <option value="dev">Dev</option>
+                        <option value="prod">Production</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Common Params</li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="_type">Type</label>
+                            <select class="form-control" id="_type" name="_type">
+                                <option value="ONE_TIME">ONE_TIME</option>
+                                <option value="RECURRING">RECURRING</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="_mId">Merchant Id</label>
+                            <input class="form-control" type="text" name="_mId" id="_mId" value="DP00001">
+                        </div>
+                        <div class="form-group">
+                            <label for="_amount">Amount</label>
+                            <input class="form-control" type="number" name="_amount" id="_amount" value="100.00">
+                        </div>
+                        <div class="form-group">
+                            <label for="_firstName">First Name</label>
+                            <input class="form-control" type="text" name="_firstName" id="_firstName" value="UserA">
+                        </div>
+                        <div class="form-group">
+                            <label for="_lastName">Last Name</label>
+                            <input class="form-control" type="text" name="_lastName" id="_lastName" value="UserA">
+                        </div>
+                        <div class="form-group">
+                            <label for="_email">Email</label>
+                            <input class="form-control" type="text" name="_email" id="_email" value="abc@mail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="_reference">Referance</label>
+                            <input class="form-control" type="text" name="_reference" id="_reference" value="DP12345">
+                        </div>
+                        <div class="form-group">
+                            <label for="_description">Description</label>
+                            <input class="form-control" type="text" name="_description" id="_description" value="test Product">
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="_returnUrl">Return URL</label>
+                            <input class="form-control" type="text" name="_returnUrl" id="_returnUrl"
+                                   value="http://localhost/pluginItem/controllers/process.php">
+                        </div>
+                        <div class="form-group">
+                            <label for="_cancelUrl">Cancel URL</label>
+                            <input class="form-control" type="text" name="_cancelUrl" id="_cancelUrl"
+                                   value="http://localhost/dpIpgPage.html">
+                        </div>
+                        <div class="form-group">
+                            <label for="_cancelUrl">Response URL</label>
+                            <input class="form-control" type="text" name="_responseUrl"
+                                   value='http://localhost/pluginItem/controllers/serverRes.php'>
+                        </div>
+                        <div class="form-group">
+                            <label for="_currency">Currency</label>
+                            <input class="form-control" type="text" name="_currency" id="_currency" value="LKR">
+                        </div>
+                        <div class="form-group">
+                            <label for="_orderId">Order ID</label>
+                            <input class="form-control" type="text" name="_orderId" id="_orderId" value="DP12355">
+                        </div>
+                        <div class="form-group">
+                            <label for="_pluginVersion">Plugin Version</label>
+                            <input class="form-control" type="text" name="_pluginVersion" id="_pluginVersion" value="1.0">
+                        </div>
+                        <div class="form-group">
+                            <label for="_pluginName">Plugin Name</label>
+                            <input class="form-control" type="text" name="_pluginName" id="_pluginName" value="CUSTOM">
+                        </div>
+                        <div class="form-group">
+                            <label for="api_key">API KEY</label>
+                            <input class="form-control" type="text" name="api_key" id="api_key"
+                                   value="7bfe299e691039a0f86619a28bd9320d">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page">Recurring Params</li>
+                    </ol>
+                </nav>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="_startDate">Start Date</label>
+                            <input class="form-control" type="text" name="_startDate" id="_startDate" value="2020-08-20">
+                        </div>
+                        <div class="form-group">
+                            <label for="_endDate">End Date</label>
+                            <input class="form-control" type="text" name="_endDate" id="_endDate" value="2020-09-20">
+                        </div>
+                        <div class="form-group">
+                            <label for="_interval">Interval</label>
+                            <select class="form-control" id="_interval" name="_interval">
+                                <option value="0">YEARLY</option>
+                                <option value="1">BIANNUAL</option>
+                                <option value="2">QUARTERLY</option>
+                                <option value="3" selected>MONTHLY</option>
+                                <option value="4">WEEKLY</option>
+                                <option value="5">DAILY</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="_doFirstPayment">Do first Payment / <b>Get first payment in recurring register time or not</b></label>
+                            <select class="form-control" id="_doFirstPayment" name="_doFirstPayment">
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <button type="submit" class="btn btn-success btn-block">Pay</button>
+    </form>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+

@@ -25,6 +25,7 @@
             <th scope="col">Order ID</th>
             <th scope="col">Transaction ID</th>
             <th scope="col">Description</th>
+            <th scope="col">Type</th>
         </tr>
         </thead>
         <tbody>
@@ -34,6 +35,7 @@
             echo('<td>' . $_GET['orderId'] . '</td>');
             echo('<td>' . $_GET['trnId'] . '</td>');
             echo('<td>' . $_GET['desc'] . '</td>');
+            echo('<td>' . $_GET['type'] . '</td>');
             ?>
         </tr>
         </tbody>
