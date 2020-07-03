@@ -70,3 +70,12 @@ Signature valid
 Signature valid
 {"type":"RECURRING","orderId":"DP12355","trnId":"-","status":"SUCCESS","desc":"Approved","signature":"J3E8u5a5trsh4ZWpUWTK+np5Eft0G6XvLLrbMhxcrTJn1lrLLj5+fir3GMrr9Zah316ee1cNi1LFPiwjFa68twGGmzCIw0IiG\/dT968xppO\/fGDBJrLqLAFPwfE9ftTYA4qJd30xdENUtJJ5hTsUc2wK9tt8B4dkzqRqqNM1eRZGQSECWCpyxflVidboRWkKht5JQeJoTvRyGPXSQv2xr\/n2vrnz7PV4I63Fy2Jb9B6FOCaBCnKTGXNEcr44Hgl697t5Q+jhm77NEDorHkdBTCodrRkk647FicTHpDUq05Z92zWXFfzv1O5DOySrbI22+jkbpDMAREar2\/uYjflxMg==","recurring":{"interval":"Monthly","isRetry":true,"retryAttempts":2,"startingDate":"2020-08-20 00:00:00","nextPaymentDate":"2020-08-20 16:44:13","lastDate":"2020-09-20","doFirstPayment":"0","recurringAmount":"100.00"},"card":{"expiry":"12-25","number":"xxxx-xxxx-xxxx-0023"}}
 
+Signature valid
+{"type":"ONE_TIME","orderId":"DP12355","trnId":935,"status":"SUCCESS","desc":"Approved","signature":"nOaZaqtRdvozz6bcDkw4brFVb8gQ2TPxXDGA1FEboX5shYNTJgMVfsK0icGgmixJO7YpWDOls8aLwlP7V6XsmhHd3ISEbPXB8oySq\/5DyrS3bQw2tjuGq\/Z35MJIw\/4oLY+UwuFb43pw9rmQzvzSxciQ9ATHbjhCWqDOQ0ZF2D1i+oZv34i6xsXgS3VOCuUtgUnLfQBFxhVu\/xcTxtQcCA9hLpXpKQA+QyvuVyyfD5JQTmfsSv\/EZElic8F8YqN5WrxBQRxsppniUSPKoJgJLahVswyYCMg3MHSsefYPJiWilhnsZlOl1bcx6bSujWfm93acHBao+l\/3KZUeouunYQ=="}
+
+Signature valid
+{"type":"RECURRING","orderId":"DP12355","trnId":936,"status":"SUCCESS","desc":"Approved","signature":"insfXE4UhD5tvbvetQnMgXMCwybzDUURmdEqaWpigX7tNCHfhUUi6JbJKmWjOZk2Ibrj9skEtTNQIe6lCZQPci3y4CCEQ9Yaj60BlXWGoQePQ8+3NzxGK9Zl2pO242bnYxI\/wP2wvVCv0edb5t7LVulg115snEDziQyVkjMxfxP2ZewgYP9LPuCDG2IUF9sHSHM7AuJAkK5ZfSQlURfdT3rNa0zqJa\/Cu6FWM2usU+PpLONIDegW33v51AsAotRXiuyAeKhw+AWWXxsjLi\/qXQzGgfH0y84WeEOzjHGdl1OszxxaVAG8qLU\/aKcDdOKSp1E1mENe4B6O6iifbA4DWg==","recurring":{"interval":"Monthly","isRetry":true,"retryAttempts":2,"startingDate":"2020-08-20 00:00:00","nextPaymentDate":"2020-08-20 10:22:55","lastDate":"2020-09-20","doFirstPayment":"1","recurringAmount":"100.00"},"card":{"expiry":"12-25","number":"xxxx-xxxx-xxxx-1118"}}
+
+Signature invalid 1
+{"type":"CARD_ADD","card":{"cardList":[{"brand":"MASTERCARD","cardId":1113,"expiry":"12-25","id":1113,"issuer":"FISERV SOLUTIONS, LLC","mask":"511111xxxxxx1118","nickName":"Card","reference":"DP123456"}],"newCard":{"brand":"MASTERCARD","cardId":1113,"expiry":"12-25","id":1113,"issuer":"FISERV SOLUTIONS, LLC","mask":"511111xxxxxx1118","nickName":"Card","reference":"DP123456"},"status":"SUCCESS"}}
+

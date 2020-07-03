@@ -39,20 +39,21 @@ $lastName = $_POST['_lastName'];
 $email = $_POST['_email'];
 $description = $_POST['_description'];
 $apiKey = $_POST['api_key'];
-$reponseUrl = $_POST['_responseUrl'];
+$responseUrl = $_POST['_responseUrl'];
 $type = $_POST['_type'];
 $amount = 0.00;
 $currency = 'LKR';
 $startDate = '';
 $endDate = '';
 $interval = '';
+$doFirstPayment = 0;
 
 switch ($type) {
     case "ONE_TIME":
         $amount = $_POST['_amount'];
         $currency = $_POST['_currency'];
         $dataString = $merchant . $amount . $currency . $pluginName . $pluginVersion . $returnUrl . $cancelUrl . $orderId .
-            $reference . $firstName . $lastName . $email . $description . $apiKey . $reponseUrl;
+            $reference . $firstName . $lastName . $email . $description . $apiKey . $responseUrl;
         break;
     case "RECURRING":
         $amount = $_POST['_amount'];
@@ -62,12 +63,12 @@ switch ($type) {
         $interval = $_POST['_interval'];
         $doFirstPayment = $_POST['_doFirstPayment'];
         $dataString = $merchant . $amount . $currency . $pluginName . $pluginVersion . $returnUrl . $cancelUrl . $orderId .
-            $reference . $firstName . $lastName . $email . $description . $apiKey . $reponseUrl . $startDate . $endDate .
+            $reference . $firstName . $lastName . $email . $description . $apiKey . $responseUrl . $startDate . $endDate .
             $interval . $doFirstPayment;
         break;
     case "CARD_ADD":
         $dataString = $merchant . $pluginName . $pluginVersion . $returnUrl . $cancelUrl . $orderId . $reference .
-            $firstName . $lastName . $email . $description . $apiKey . $reponseUrl;
+            $firstName . $lastName . $email . $description . $apiKey . $responseUrl;
         break;
 }
 
@@ -81,7 +82,7 @@ $signa = base64_encode($signature);
 $req = '_mId=' . $merchant . '&_amount=' . $amount . '&_currency=' . $currency . '&_pluginName=' . $pluginName . '&_pluginVersion=' . $pluginVersion .
     '&_returnUrl=' . $returnUrl . '&_cancelUrl=' . $cancelUrl . '&_orderId=' . $orderId . '&_reference=' . $reference .
     '&_firstName=' . $firstName . '&_lastName=' . $lastName . '&_email=' . $email .
-    '&_description=' . $description . '&api_key=' . $apiKey . '&_responseUrl=' . $reponseUrl . '&_type=' . $type .
+    '&_description=' . $description . '&api_key=' . $apiKey . '&_responseUrl=' . $responseUrl . '&_type=' . $type .
     '&_startDate=' . $startDate . '&_endDate=' . $endDate . '&_interval=' . $interval . '&_doFirstPayment=' . $doFirstPayment .
     '&signature=' . urlencode($signa);
 
