@@ -25,9 +25,8 @@
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Stage - (Testing purpose parameter)</label>
                     <select class="form-control" id="exampleFormControlSelect1" name="server">
-                        <option value="local" selected>Local</option>
-                        <option value="dev">Dev</option>
-                        <option value="prod">Production</option>
+                        <option value="local" >Local</option>
+                        <option value="dev" selected>Sandbox</option>
                     </select>
                 </div>
             </div>
@@ -73,17 +72,17 @@
                         <div class="form-group">
                             <label for="_returnUrl">Return URL</label>
                             <input class="form-control" type="text" name="_returnUrl" id="_returnUrl"
-                                   value="http://localhost/pluginItem/controllers/process.php">
+                                   value="http://simulator.directpay.lk/controllers/process.php">
                         </div>
                         <div class="form-group">
                             <label for="_cancelUrl">Cancel URL</label>
                             <input class="form-control" type="text" name="_cancelUrl" id="_cancelUrl"
-                                   value="http://localhost/dpIpgPage.html">
+                                   value="http://simulator.directpay.lk/dpIpgPage.html">
                         </div>
                         <div class="form-group">
                             <label for="_cancelUrl">Response URL</label>
                             <input class="form-control" type="text" name="_responseUrl"
-                                   value='http://localhost/pluginItem/controllers/serverRes.php'>
+                                   value='http://simulator.directpay.lk/controllers/serverRes.php'>
                         </div>
                         <div class="form-group">
                             <label for="_orderId">Order ID</label>
