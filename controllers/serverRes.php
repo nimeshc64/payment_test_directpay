@@ -7,6 +7,9 @@
 $file = fopen("log.txt","a");
 $json_str = file_get_contents('php://input');
 
+fwrite($file, 'Content: '.$json_str);
+echo 'Content: '.$json_str;
+
 $json_obj = json_decode($json_str);
 
 $dataString =  $json_obj->orderId.$json_obj->trnId.$json_obj->status.$json_obj->desc;
@@ -18,10 +21,13 @@ $signatureVerify = openssl_verify($dataString, base64_decode($signature), $pubKe
 
 if ($signatureVerify == 1) {
     fwrite($file, "Signature valid"."\n");
+    echo 'Signature valid';
 } elseif ($signatureVerify == 0) {
     fwrite($file, "Signature invalid 1"."\n");
+    echo 'Signature invalid';
 } else {
     fwrite($file, "Signature invalid 2"."\n");
+    echo 'Signature invalid';
 }
 
 
