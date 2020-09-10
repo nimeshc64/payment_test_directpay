@@ -9,22 +9,26 @@ include 'config.php';
 switch ($_POST['server']) {
     case 'local':
         $localUrl = "http://localhost/mastercardapi/public/initPluginItem";
+        $keyfile = "file://" . __DIR__ . "/../keys/private_key.pem";
         break;
     case 'dev':
         $localUrl = "https://testpay.directpay.lk/";
+        $keyfile = "file://" . __DIR__ . "/../keys/private_key.pem";
         break;
     case 'prod':
         $localUrl = "https://pay.directpay.lk/";
+        $keyfile = "file://" . __DIR__ . "/../keys/private_key_prod.pem";
         break;
     default:
         $localUrl = "http://localhost/mastercardapi/public/initPluginItem";
+        $keyfile = "file://" . __DIR__ . "/../keys/private_key.pem";
         break;
 }
 
 $devUrl = "";
 $prodUrl = "";
 
-$keyfile = "file://" . __DIR__ . "/../keys/private_key.pem";
+
 echo("<p style='color: white;'>keyPath: <br/>" . $keyfile . "</p>" . "\n");
 $pri_key = openssl_pkey_get_private($keyfile);
 $merchant = $_POST['_mId'];
