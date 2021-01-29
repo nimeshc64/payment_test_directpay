@@ -6,7 +6,7 @@
 - Rename privateKey file name to private_key.pem
 - Rename publicKey file name to public_key.pem
 
-#### [Documentation](https://doc.directpay.lk/cardPayment/)
+#### [Documentation](https://doc.directpay.lk/browserPayment/)
 
 
 ###### Version
